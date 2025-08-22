@@ -1,0 +1,15 @@
+apiVersion: jenkins.io/v1
+kind: HelmRelease
+metadata:
+  name: wordpress
+spec:
+  chart:
+    repository: https://charts.bitnami.com/bitnami
+    name: wordpress
+    version: 16.1.3
+  values:
+    wordpressUsername: admin
+    wordpressPassword: admin123
+    mariadb:
+      auth:
+        rootPassword: root123
