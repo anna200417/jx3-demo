@@ -1,0 +1,10 @@
+# environments/wordpress/wordpress.yaml
+apiVersion: jenkins.io/v1
+kind: Environment
+metadata:
+  name: wordpress
+spec:
+  source:
+    gitURL: https://github.com/anna200417/jx3-demo.git
+    path: environments/wordpress
+  promotionStrategy: Automatic
